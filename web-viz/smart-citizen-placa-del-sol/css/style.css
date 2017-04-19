@@ -1,0 +1,42 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  font-weight: bold;
+}
+
+.kits {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.device {
+  flex-direction: column;
+  display: flex;
+  margin: 5px;
+  width: 120px;
+  padding: 5px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.device:hover {
+  transform: scale(1.1);
+  transition: all .4s ease-in-out;
+}
+
+.status {
+  font-size: 14px;
+  margin-top: auto;
+  font-weight: normal;
+}
+
+.offline {
+  background: #E74C3C!important;
+  transition: background-color 500ms linear;
+}
+
+.online {
+  background: #35E67E!important;
+  transition: background-color 500ms linear;
+}

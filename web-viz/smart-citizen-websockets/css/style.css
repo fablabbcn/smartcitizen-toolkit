@@ -1,0 +1,15 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+div {
+  float: left;
+  display: block;
+  background: #4FC9E8!important;
+  margin: 5px;
+  width: 100px;
+  padding: 5px;
+  height: 100px;
+}

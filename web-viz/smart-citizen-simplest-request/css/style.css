@@ -1,0 +1,15 @@
+body {
+  background: DodgerBlue;
+  color: white;
+  font: bold 75px Helvetica, Arial;
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+}
