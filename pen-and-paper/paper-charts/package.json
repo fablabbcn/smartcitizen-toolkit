@@ -1,0 +1,22 @@
+{
+  "name": "msCharts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^1.7.2",
+    "gulp": "^3.8.10"
+  },
+  "dependencies": {
+    "d3": "^3.4.13",
+    "d3-queue": "^3.0.5",
+    "d3-time": "^1.0.6",
+    "d4": "^0.8.15",
+    "install": "^0.8.8"
+  }
+}

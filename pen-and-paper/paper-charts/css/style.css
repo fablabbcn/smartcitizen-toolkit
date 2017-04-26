@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,700');
+
+body {
+  color: black;
+  font-family: 'Rubik', sans-serif;
+}
+
+.header {
+  color: black;
+  font-family: 'Rubik', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.header span{
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+.chart {
+	margin-left: 100px;
+}
+
+svg.d4 {
+  fill: black;
+  font-family: 'Rubik', sans-serif;
+  padding-left: 600px;
+  margin-bottom: 50px;
+}
+
+
+svg.d4 text.device-info {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+svg.d4 text.device-info.extra{
+  font-size: 40px;
+  font-weight: normal;
+}
+
+svg.d4 text.device-info.meta{
+  font-size: 30px;
+  font-weight: normal;
+}
+
+
+
+svg.d4 text{
+  fill: black;
+  stroke: black;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+svg.d4 text .title{
+
+}
+
+svg.d4 text .subtitle{
+
+}
+
+svg.d4 .grid .border .grid, svg.d4 .domain {
+	stroke: black !important;
+}
+
+svg.d4 .tick text{
+  fill: black;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.d4 .grid.border rect {
+  fill: none;
+  stroke: black;
+  font-size: 500;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.d4 .grid line {
+  fill:none;
+  stroke: black;
+  stroke-width: 3px;
+  stroke-dasharray :3, 4;
+  shape-rendering: crispEdges;
+}
+
+.d4 .line .series0, .d4 .series0 path, .d4 .connectors .series0 line {
+    stroke: black;
+    stroke-width: 1.3px;
+}
+
+.d4 .line .series1, .d4 .series1 path, .d4 .connectors .series1 line {
+    stroke: #666;
+    stroke-width: 5px;
+    stroke-opacity:0.4;
+}
+
+h1 {
+	font-size: 600px;
+}
