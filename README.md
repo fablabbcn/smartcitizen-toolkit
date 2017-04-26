@@ -9,6 +9,10 @@ Before using this documentation we suggest you to look at the [Making Sense D.23
 
 *This is a Work in process... Final documentation coming soon!*
 
-## Support
+## Support and issues
+
+* Forum [forum.smartcitizen.me](http://forum.smartcitizen.me)
+
+## Credits
 
 This work has received funding from the European Union's Horizon 2020 research and innovation program under the grant agreement No. 688620
