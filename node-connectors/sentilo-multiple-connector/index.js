@@ -1,26 +1,28 @@
 var SmartCitizen = require('./smartcitizen-connector.js'),
     request = require('request'),
-    moment = require('moment'),
+    moment = require('moment-timezone'),
     _ = require('underscore'),
     async = require('async');
 
 var config = {
   base_url: 'http://connecta.bcn.cat/connecta-catalog-web/component/map/',
-  smartcitizen_token: '',
-  max_connections: 10
+  smartcitizen_token: '', // Your Smart Citizen Token goes here
+  max_connections: 10,
+  time_zone: 'Europe/Madrid'
 }
 
 var smartcitizen = new SmartCitizen({
     token: config.smartcitizen_token 
 });
 
-// launch();
+//launch();
 
-exports.myHandler = function(event, context) {
+exports.launch = function(event, context) {
     launch();   
 };
 
 function launch(done) {
+
     var updateQueue = async.queue(updateSensor, config.max_connections); // Run ten simultaneous pushes
 
     updateQueue.drain = function() {
@@ -75,8 +77,9 @@ function pushData(device, done){
     }, function(err, httpResponse, body) {
         if (body && body.sensorLastObservations && body.sensorLastObservations.length > 0) {
         var sensorLastObservation = body.sensorLastObservations[0];
+            console.log(sensorLastObservation);
             smartcitizen.push({
-                recorded_at: moment(sensorLastObservation.timestamp, 'DD/MM/YYYYThh:mm:ss'),
+                recorded_at: moment.tz(sensorLastObservation.timestamp, 'DD/MM/YYYYThh:mm:ss', config.time_zone),
                 sensors: [{
                     id: 'ta120noise',
                     value: Number(sensorLastObservation.value)
