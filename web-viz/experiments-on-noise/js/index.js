@@ -1,4 +1,4 @@
-io.connect('wss://smartcitizen.xyz').on('data-received', function(device) {
+io.connect('wss://ws.smartcitizen.me').on('data-received', function(device) {
   if (device.data.id == 4304) {
     
     var noise = device.data.data.sensors.filter(function(sensor) {

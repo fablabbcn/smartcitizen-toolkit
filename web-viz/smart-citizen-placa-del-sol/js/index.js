@@ -5,7 +5,7 @@ $('body').append($('<h1>').text(tag)).append('<h3>').append($("<div>", {
   "class": "kits"
 }).text("Loading..."));
 
-io.connect('wss://smartcitizen.xyz').on('data-received', function(device) {
+io.connect('wss://ws.smartcitizen.me').on('data-received', function(device) {
   if (device.data.user_tags.includes(tag)) {
     $('*[data-device="' + device.device_id + '"]').data('lastUpdate', device.data.last_reading_at).data('sensorsData', device.readings).removeClass('offline').addClass('online').animateCss('bounce');
   }
